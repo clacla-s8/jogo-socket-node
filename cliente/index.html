@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/main.css">
+    <title>Jogo</title>
+  </head>
+  <body>
+    <div class="cabecalho">
+     
+    </div>
+
+    <div id="conteudo-jogo">
+      <canvas width="400" height="400"></canvas>
+      <div>
+        <span style="font-weight: bold; font-size: 20px">Regras do Jogo</span>
+        <span>
+          <br />
+          O objetivo é fazer uma sequência de 5 quadrados, <br />
+          quem conseguir primeiro ganha. <br />
+          Os jogadores podem se comunicar através do chat ao lado
+        </span>
+      </div>
+      <div class="controls-wrapper">
+        <ul id="events"></ul>
+        <div class="controls">
+          <div class="chat-wrapper">
+            <form id="chat-form">
+              <input id="chat" autocomplete="off" title="chat" />
+              <button id="say">ENVIAR</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="rodape"></footer>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="src/cliente.js"></script>
+  </body>
+</html>

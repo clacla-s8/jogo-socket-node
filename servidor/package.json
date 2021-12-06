@@ -1,0 +1,31 @@
+{
+  "name": "servidor",
+  "version": "1.0.0",
+  "description": "jogo com socket em node.js",
+  "main": "servidor.js",
+  "scripts": {
+    "start": "node servidor.js",
+    "dev": "nodemon servidor.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Multijogador",
+    "Jogo",
+    "Socket.IO",
+    "Node"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/clacla-s8/jogo-socket-node.git"
+  },
+  "author": "Clarice Santos",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "randomcolor": "^0.5.4",
+    "socket.io": "^2.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
