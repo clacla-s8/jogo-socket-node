@@ -19,7 +19,7 @@ const { makeTurn, getBoard, clear } = createBoard(20);
 io.on('connection', (sock) => {
   const color = randomColor();
 
-  // increase number to have cooldown between turns
+  // aumenta o numero para ter um intervalo entre jogadas
   const cooldown = createCooldown(10);
 
   const onTurn = ({ x, y }) => {
@@ -36,8 +36,8 @@ io.on('connection', (sock) => {
     }
   };
 
-  // Disabled, until the client side is injection-proof
-   sock.on('message', (text) => io.emit('message', text));
+
+  sock.on('message', (text) => io.emit('message', text));
   sock.on('turn', onTurn);
 
   sock.emit('board', getBoard());
